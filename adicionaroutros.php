@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="libs/normalize/css/normalize-7.0.0.css">
 </head>
 <body>
-  
+
 <?php require 'menu.php' ?>
 
-   <div class="container">
+<div class="container">
 	 <div class="row">
 	 	<div class="col-md-6 col-md-offset-3">
-	 		<h1 class="text-center">Adicionar Novo Documento Suporte</h1>
-			<form action="adicionandosuporte.php" method="post">
+	 		<h1 class="text-center">Adicionar Novo Documento Qualidade/Tecnologia</h1>
+			<form action="adicionandooutros.php" method="post">
 			   	<div class="form-group">
 			        <label class="control-label" for="tipo">Tipo:</label>
 			        <input class="form-control" type="text" id="tipo" name="tipo" />
@@ -51,10 +51,6 @@
               <label class="control-label" for="data">Data</label>
               <input class="form-control" type="date" id="data" name="data" />
           </div>
-            <div class="form-group">
-              <label class="control-label" for="horario">Horário</label>
-              <input class="form-control" type="time" id="horario" name="horario" />
-          </div>
           <div class="form-group">
               <label class="control-label" for="tags">Tags:</label>
               <input type="radio" id="tags" name="tags" value="1">Sim
@@ -62,44 +58,15 @@
           </div>
           <div class="form-group">
               <label class="control-label" for="redator">Redator</label>
-              <select class="form-control required" id="redator" name="redator">
-                <option value="0" selected="">Selecione um Colaborador</option>
-                <option value="14">Afonso Soares</option>
-                <option value="60">André Gonzaga</option>
-                <option value="24">Carlos Magno</option>
-                <option value="37">Claudio Nani</option>
-                <option value="62">Denilson Castro</option>
-                <option value="40">Douglas Meneses</option>
-                <option value="36">Elisangela Meneses</option>
-                <option value="38">Fernando Junqueira</option>
-                <option value="34">Isac Ramos</option>
-                <option value="64">Isamara Mello</option>
-                <option value="48">Johann Albino</option>
-                <option value="63">Juliana Souza</option>
-                <option value="30">Julio César</option>
-                <option value="33">Kennedy Alves</option>
-                <option value="66">Lara Félix</option>
-                <option value="58">Luiz Paulo</option>
-                <option value="65">Matheus Lima</option>
-                <option value="20">Michael Avila</option>
-                <option value="67">Núbia Lima</option>
-                <option value="25">Priscilla Barbara</option>
-                <option value="41">Raquel Oliveira</option>
-                <option value="49">Túlio Gonzaga</option>
-                <option value="23">Victor Souza</option>
-                <option value="55">Victor Winter</option>
-                <option value="68">Vitor Henrique</option>
-                <option value="26">Wellington Cassio</option>
-                <option value="39">Wilker Kunert</option>
-              </select>
+              <input class="form-control" type="text" id="redator" name="redator" />
           </div>
           <div class="form-group">
               <label class="control-label" for="observacoes">Observações</label>
               <input class="form-control" type="text" id="observacoes" name="observacoes" />
           </div>
-          <div class="form-group">
+           <div class="form-group">
               <label class="control-label" for="link">Link</label>
-              <input class="form-control" type="text" id="link" name="link" />
+              <input class="form-control" type="text" id="link" name="link"/>
           </div>
           <div class="form-group">
               <label class="control-label" for="status">Status</label>

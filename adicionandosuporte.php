@@ -12,6 +12,7 @@
 	$redator = $_POST['redator'];
 	$observacoes = $_POST['observacoes'];
 	$link = $_POST['link'];
+	$status = $_POST['status'];
 
 
 	require 'database/conexao.php';
@@ -77,14 +78,25 @@
 
     while($dados=mysqli_fetch_assoc($consultanome))
 	      {
-	        $nome = $dados['name'].' '.$dados['surname'];
+	        $nome = $dados['name'].' '.$dados['surname'];	  
+	        $nomecerto= $dados['name'];
+			$sobrenomecerto= $dados['surname'];
+			$name = strtolower($dados['name']);
+			$surname = strtolower($dados['surname']);       
 	      }
 
+	
+	$nomeavancao = 'jogadores/'.$name.'_'.$surname.'.png';
 
-
-	$sql = "INSERT INTO `av_documentos` VALUES (NULL, '$tipo', '$produto_avanco', '$topico', '$sub_topico','$dossie','$sub_dossie','$nome_doc','$data','$tags','$nome','$observacoes','$link');"; 
+	$sql = "INSERT INTO `av_documentos` VALUES (NULL, '$tipo', '$produto_avanco', '$topico', '$sub_topico','$dossie','$sub_dossie','$nome_doc','$data','$tags','$nome','$observacoes','$link', '$status');"; 
 		
 	mysqli_query($conexao,$sql) or die("Erro ao tentar cadastrar registro");
+
+
+    $avancao = "INSERT INTO `av_base_de_conhecimento_avancao` (codigo_jogador, nome_jogador, sobrenome_jogador, conteudo_postado_base_de_conhecimento, data_conteudo_postado, caminho_foto_jogador, data) VALUES ('$redator', '$nomecerto', '$sobrenomecerto', '$nome_doc', '$data', '$nomeavancao', '$data');";
+
+    mysqli_query($conexao,$avancao) or die("Erro ao tentar cadastrar registro");
+
 	
     $url = 'index.php';
 	echo'<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">';
