@@ -17,8 +17,6 @@
             <ul class="dropdown-menu">
               <li><a href="adicionarsuporte.php">Adicionar Doc.Suporte</a></li>
               <li><a href="adicionaroutros.php">Adicionar Doc.Qualidade/Tecno</a></li>
-              <li><a href="editarsuporte.php">Editar Doc Suporte</a></li>
-              <li><a href="editaroutros.php">Editar Doc.Qualidade/Tecno</a></li>
               <li><a href="excluirdoc.php">Excluir Documentos</a></li>
             </ul>
           </li>          

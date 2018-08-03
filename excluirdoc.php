@@ -78,7 +78,7 @@
           }
           else if ($status==-1)
           {
-            $status = 'Pendendte';
+            $status = 'Pendente';
           }
           else
           {
@@ -92,9 +92,9 @@
                   <th>$data</th>
                   <th>$redator</th>
                   <th>$observacao</th>
-                  <th><a href='$link'>Abrir</a></th>
+                  <th><a class='btn btn-xs btn-info' href='$link'>Abrir</a></th>
                   <th>$status</th>
-                  <th><button type='button' class='btn btn-danger navbar-btn'>Excluir</button></th>
+                  <th><a class='btn btn-xs btn-danger' href='excluindo.php?id=$id'>Excluir</a></th>
                 </tr>
                ";
         }
