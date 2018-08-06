@@ -20,7 +20,7 @@
               <li><a href="excluirdoc.php">Excluir Documentos</a></li>
             </ul>
           </li>          
-          <li><a href="#">Painel de Visualizações</a></li>
+          <li><a href="visualiza.php">Painel de Visualizações</a></li>
         </ul>
       </div>
     </div><!-- /.container-fluid -->
